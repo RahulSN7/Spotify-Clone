@@ -1,0 +1,852 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.head-container {
+  display: block;
+  position: fixed;
+  width: 1550px;
+  background-color: #000;
+  z-index: 20;
+
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.Spotify-logo {
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+}
+
+#house {
+
+  font-size: 23px;
+  color: rgb(241, 248, 248);
+
+}
+
+.head-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-top: 15px;
+  background-color: #232121;
+  border-radius: 50%;
+}
+
+.head-home:hover {
+  background-color: rgb(57, 55, 55);
+
+  .homehover {
+    opacity: 1;
+  }
+
+}
+
+#house:hover {
+  color: white;
+}
+
+
+
+#search {
+  color: beige;
+  font-size: 25px;
+
+}
+
+input:focus {
+  outline: none;
+
+
+}
+
+.head-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #232121;
+  width: 480px;
+  height: 48px;
+  padding-left: 10px;
+  border-radius: 50px;
+  margin-top: 15px;
+  gap: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.head-search:hover {
+  background-color: rgb(41, 40, 40);
+  border: 1px solid gray;
+}
+
+
+.songsearch {
+  border: none;
+  font-size: 17px;
+  font-weight: 1rem;
+  color: #b3b3b3;
+  background: transparent;
+
+}
+
+.songsearch:hover {
+  background-color: rgb(41, 40, 40);
+}
+
+.head-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.head-info-points {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 180px;
+  margin-top: 25px;
+}
+
+.head-info-class {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-weight: 550;
+}
+
+.head-info-points span:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+}
+
+.head-info-class:hover {
+  transition-duration: 0.3s;
+  color: #f0e6e6;
+}
+
+.head-info-id {
+  margin: 18px;
+  font-size: 25px;
+  color: #b3b3b3;
+}
+
+.head-app {
+  display: flex;
+  flex-direction: row;
+  margin: 25px;
+  gap: 20px;
+}
+
+.head-app span:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  color: white;
+}
+
+#signup:hover {
+  color: white;
+}
+
+#installapp {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+}
+
+#installicon {
+  color: #b3b3b3;
+  font-size: larger;
+
+}
+
+#installicon:hover {
+  color: white;
+}
+
+#install {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+#signup {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+.loginbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.loginbutton:hover {
+  transform: scale(1.03);
+  transition-duration: 0.3s;
+}
+
+.login {
+  background-color: white;
+  width: 110px;
+  height: 48px;
+  border-radius: 30px;
+  font-weight: 795;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.buttonlink {
+  text-decoration: none;
+}
+
+.tribar {
+  color: #b3b3b3;
+  margin: 25px;
+  display: none;
+}
+
+@media screen and (max-width:850px) {
+  .tribar {
+    display: block;
+  }
+}
+
+.sidebar-container {
+  width: 350px;
+  background: #121212;
+  position: fixed;
+  left: 8px;
+  top: 81px;
+  bottom: 5px;
+  border-radius: 10px;
+  height: 600px;
+
+
+}
+
+.sidebar-box {
+  display: flex;
+  flex-direction: row;
+  gap: 160px;
+  padding: 30px;
+}
+
+
+
+.sidebar-box i:hover {
+  color: white;
+}
+
+.sidebar-box h2:hover {
+  color: white;
+}
+
+.sidebar-box span:hover {
+  color: white;
+}
+
+.lib {
+  font-size: 1rem;
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+#plussign {
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.sidebar-items {
+  background-color: #212121;
+  padding: 17px 15px;
+  border-radius: 10px;
+  margin-left: 7px;
+  margin-right: 2px;
+  margin-bottom: 17px;
+}
+
+.sidebar-items h2 {
+  color: #f0e6e6;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.sidebar-items p {
+  font-size: 0.9rem;
+  color: #f0e6e6;
+  margin-bottom: 20px;
+}
+
+.sidebar-items button {
+  background-color: white;
+  width: 140px;
+  height: 37px;
+  border-radius: 30px;
+  font-weight: 790;
+  cursor: pointer;
+}
+
+.sidebar-scroll {
+  height: 250px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: transparent;
+
+}
+
+.sidebar-scroll:hover::-webkit-scrollbar-thumb {
+  background: #333232;
+  width: 5px;
+  scrollbar-width: thin;
+  height: 200px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #464444;
+}
+
+.sidebar-items button:hover {
+  transform: scale(1.02);
+
+}
+
+.rights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 60px;
+  gap: 0.8rem;
+  font-size: 10px;
+  padding-left: 27px;
+  margin-bottom: 15px;
+}
+
+.rights a {
+  text-decoration: none;
+
+  color: #b3b3b3;
+}
+
+.cookieslink {
+  color: #f0e6e6;
+  text-decoration: none;
+  font-size: 13px;
+  padding-left: 27px;
+
+}
+
+.cookieslink:hover {
+  text-decoration: underline;
+}
+
+.language {
+  background-color: #121212;
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid #f0e6e6;
+  font-weight: 790;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: #f0e6e6;
+  cursor: pointer;
+}
+
+#globe {
+  margin: 3px;
+
+}
+
+.language:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+}
+
+.main-container-all {
+  position: relative;
+  top: 80px;
+}
+
+.main-container {
+  width: 1148px;
+
+  background-color: #121212;
+  margin-left: 370px;
+  border-radius: 10px;
+  display: block;
+  position: absolute;
+
+}
+
+@media(max-width:850px) {
+
+  .main-container {
+    width: 600px;
+  }
+
+  #none {
+    display: none;
+  }
+
+  .head-search {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+  }
+
+
+
+
+}
+
+.all {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.main-container h2 {
+  color: white;
+  padding: 28px;
+
+}
+
+.topshow {
+  position: relative;
+  top: 20px;
+  right: 35px;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+  font-weight: bold;
+
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Popular:hover {
+  text-decoration: underline white;
+}
+
+.main-container a {
+  text-decoration: none;
+}
+
+.main-container .art {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: 16px;
+
+}
+
+.artistinfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+  gap: 7px;
+}
+
+.name {
+  color: white;
+  font-weight: 500;
+}
+
+.profession {
+  color: #b3b3b3;
+  font-size: 13px;
+  font-weight: 580;
+}
+
+.card {
+  position: relative;
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1DB954;
+  border-radius: 50%;
+  padding: 15px;
+  margin-left: 100px;
+  font-size: 20px;
+  position: absolute;
+  left: 25px;
+  top: 90px;
+  opacity: 0;
+}
+
+
+.main-box {
+
+  background-color: #121212;
+  width: 200px;
+  height: 207px;
+  margin-left: 22px;
+  cursor: pointer;
+
+}
+
+.main-box:hover {
+  background-color: #121212;
+  background-image: linear-gradient(315deg, #212121 0%, #121212 100%);
+  border-radius: 10px;
+}
+
+.main-box:hover .play {
+  opacity: 1;
+}
+
+
+.albums {
+  width: 160px;
+  height: 150px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.albums-box {
+  background-color: #121212;
+  width: 180px;
+  height: 260px;
+  margin-left: 8px;
+  cursor: pointer;
+
+}
+
+.albums-box:hover {
+  background-color: #121212;
+  background-image: linear-gradient(315deg, #212121 0%, #121212 100%);
+  border-radius: 10px;
+}
+
+.albums-box:hover .play {
+  opacity: 1;
+}
+
+.play:hover {
+  transform: scale(1.03);
+  background-color: #35da6f;
+
+}
+
+.albums-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+  gap: 7px;
+}
+
+.songname {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.songartist {
+  color: #b3b3b3;
+  font-size: 13px;
+  font-weight: 580;
+}
+
+.albumsplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1DB954;
+  border-radius: 50%;
+  padding: 15px;
+  margin-left: 100px;
+  font-size: 20px;
+  position: absolute;
+  left: 18px;
+  top: 102px;
+  opacity: 0;
+}
+
+
+.albums-box:hover .albumsplay {
+  opacity: 1;
+}
+
+.albumsplay:hover {
+  background-color: #35da6f;
+  transform: scale(1.03);
+}
+
+.Popularalbums:hover {
+  text-decoration: underline white;
+}
+
+.popularalbums:hover {
+  text-decoration: underline white;
+}
+
+.radio-box:hover {
+  background-color: #121212;
+  background-image: linear-gradient(315deg, #212121 0%, #121212 100%);
+  border-radius: 10px;
+  height: 225px;
+  cursor: pointer;
+}
+
+.radio-card {
+  position: relative;
+}
+
+.radioplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1DB954;
+  border-radius: 50%;
+  padding: 15px;
+  margin-left: 100px;
+  font-size: 20px;
+  position: absolute;
+  left: 18px;
+  top: 102px;
+  opacity: 0;
+}
+
+.radioplay:hover {
+  background-color: #35da6f;
+  transform: scale(1.03);
+
+}
+
+.radio-box:hover .radioplay {
+  opacity: 1;
+}
+
+.radio-box {
+  background-color: #121212;
+  width: 180px;
+  height: 240px;
+  margin-left: 10px;
+}
+
+.footer-points {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-points ul {
+  list-style-type: none;
+}
+
+.footer-li-head {
+  font-size: 10px;
+  margin-left: -28px;
+}
+
+.footer-li {
+  color: #b3b3b3;
+}
+
+.spotify-footer-box {
+  margin-bottom: 40px;
+}
+
+.footer-icons {
+  display: grid;
+  position: relative;
+  left: -35px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 70px;
+
+}
+
+#insta:hover {
+  background-color: #464444;
+}
+
+#twitter:hover {
+  background-color: #464444;
+}
+
+#facebook:hover {
+  background-color: #464444;
+}
+
+
+#insta {
+  color: white;
+  background-color: #333232;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#twitter {
+  color: white;
+  background-color: #333232;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#facebook {
+  color: white;
+  background-color: #333232;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+
+.footer-ul-1 .footer-li {
+  display: grid;
+  margin-top: 12px;
+}
+
+.footer-ul-1 h2 {
+  margin-top: 50px;
+  margin-bottom: -25px;
+  cursor: auto;
+}
+
+.footer-ul-2 .footer-li {
+  display: grid;
+  margin-top: 12px;
+}
+
+.footer-ul-2 h2 {
+  margin-top: 50px;
+  margin-bottom: -25px;
+  cursor: auto;
+}
+
+.footer-ul-3 .footer-li {
+  display: grid;
+  margin-top: 12px;
+}
+
+.footer-ul-3 h2 {
+  margin-top: 50px;
+  margin-bottom: -25px;
+  cursor: auto;
+}
+
+.footer-ul-4 .footer-li {
+  display: grid;
+  margin-top: 12px;
+}
+
+.footer-ul-4 h2 {
+  margin-top: 50px;
+  margin-bottom: -25px;
+  cursor: auto;
+}
+
+.footer-li:hover {
+  text-decoration: underline;
+}
+
+hr {
+  display: block;
+  margin-top: 80px;
+  width: 88%;
+  margin-left: 65px;
+  background-color: #b3b3b3;
+  height: 0.07px;
+  border: none;
+}
+
+.copyright {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  color: #b3b3b3;
+  padding: 20px;
+  padding-bottom: 100px;
+  font-size: 13px;
+
+
+}
+
+.preview {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  position: relative;
+  top: 670px;
+  height: 60px;
+  width: 1510px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px;
+  margin: 8px;
+  position: fixed;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.preview-left {
+  display: grid;
+  gap: 3px;
+}
+
+.preview-left-h {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.previewbutton {
+  background-color: white;
+  width: 140px;
+  height: 45px;
+  border-radius: 30px;
+  border-style: none;
+  font-weight: bolder;
+
+}
+
+.previewbutton:hover {
+  transform: scale(1.03);
+}
+
+.preview-left-p {
+  color: white;
+  font-size: 1rem;
+}
